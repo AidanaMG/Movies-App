@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_movie_detail"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/movie_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_title"
+                android:layout_marginTop="3dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movie_releaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_language"
+                android:layout_marginTop="3dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movie_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_releaseDate"
+                android:layout_marginTop="3dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movie_voteAverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_genre"
+                android:layout_marginTop="3dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movie_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_voteAverage"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_description"
+                android:adjustViewBounds="true"
+                android:contentDescription="@android:string/no" />
+
+            <Button
+                android:id="@+id/watch"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/movie_poster"
+                android:layout_marginTop="-2dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/trailer"
+                android:textColor="@android:color/background_light"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
